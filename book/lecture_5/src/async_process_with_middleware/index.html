@@ -1,0 +1,670 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Asynchronous processes using middleware · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../../lecture_6/" />
+    
+    
+    <link rel="prev" href="../async_process_basics/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../lecture_1/">
+            
+                <a href="../../../lecture_1/">
+            
+                    
+                    Lecture 1 - Introduction to the JavaScript ecosystem
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../../lecture_1/building.html">
+            
+                <a href="../../../lecture_1/building.html">
+            
+                    
+                    Building with NPM, Yarn, Webpack, Babel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../../lecture_1/linting.html">
+            
+                <a href="../../../lecture_1/linting.html">
+            
+                    
+                    Linting JavaScript source code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../../lecture_1/css_modules.html">
+            
+                <a href="../../../lecture_1/css_modules.html">
+            
+                    
+                    CSS and CSS modules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../../lecture_1/unit_tests.html">
+            
+                <a href="../../../lecture_1/unit_tests.html">
+            
+                    
+                    Unit tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../../lecture_2/">
+            
+                <a href="../../../lecture_2/">
+            
+                    
+                    Lecture 2 - Introduction to React
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../../lecture_2/src/props_example/">
+            
+                <a href="../../../lecture_2/src/props_example/">
+            
+                    
+                    React introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../../lecture_2/src/state_example/">
+            
+                <a href="../../../lecture_2/src/state_example/">
+            
+                    
+                    State in React
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../../lecture_2/src/pure_function_example/">
+            
+                <a href="../../../lecture_2/src/pure_function_example/">
+            
+                    
+                    Pure function components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../../lecture_2/src/user_input_example/">
+            
+                <a href="../../../lecture_2/src/user_input_example/">
+            
+                    
+                    User input
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../../lecture_3/">
+            
+                <a href="../../../lecture_3/">
+            
+                    
+                    Lecture 3 - Expanding on React
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../../lecture_3/src/debugging/">
+            
+                <a href="../../../lecture_3/src/debugging/">
+            
+                    
+                    Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../../lecture_3/src/types_of_components/">
+            
+                <a href="../../../lecture_3/src/types_of_components/">
+            
+                    
+                    Types of components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../../lecture_3/test/">
+            
+                <a href="../../../lecture_3/test/">
+            
+                    
+                    Testing React components
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../../lecture_4/">
+            
+                <a href="../../../lecture_4/">
+            
+                    
+                    Lecture 4 - State management with Redux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../../lecture_4/src/higher_order_components/">
+            
+                <a href="../../../lecture_4/src/higher_order_components/">
+            
+                    
+                    Higher-Order Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../../lecture_4/src/redux_introduction/">
+            
+                <a href="../../../lecture_4/src/redux_introduction/">
+            
+                    
+                    Redux Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../../lecture_4/src/redux_basics/">
+            
+                <a href="../../../lecture_4/src/redux_basics/">
+            
+                    
+                    Redux Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../../lecture_4/src/redux_combine_reducers/">
+            
+                <a href="../../../lecture_4/src/redux_combine_reducers/">
+            
+                    
+                    Reducer composition
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Lecture 5 - Middlewares and asynchronous processes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../async_process_basics/">
+            
+                <a href="../async_process_basics/">
+            
+                    
+                    Asynchronous processes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Asynchronous processes using middleware
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../../lecture_6/">
+            
+                <a href="../../../lecture_6/">
+            
+                    
+                    Lecture 6 - Bidirectional communication with servers
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../../lecture_6/src/websocket_basics/">
+            
+                <a href="../../../lecture_6/src/websocket_basics/">
+            
+                    
+                    WebSockets
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../../lecture_7/">
+            
+                <a href="../../../lecture_7/">
+            
+                    
+                    Lecture 7 - Routes and optimizations
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../../lecture_7/src/router-basics/">
+            
+                <a href="../../../lecture_7/src/router-basics/">
+            
+                    
+                    React Router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../../lecture_7/src/connected-react-router/">
+            
+                <a href="../../../lecture_7/src/connected-react-router/">
+            
+                    
+                    React Router connected with Redux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../../lecture_7/src/redux-selector-cache/">
+            
+                <a href="../../../lecture_7/src/redux-selector-cache/">
+            
+                    
+                    React-Redux optimizations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >Asynchronous processes using middleware</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="asynchronous-processes-with-redux-middleware">Asynchronous processes with Redux middleware</h1>
+<h2 id="running-the-application">Running the application</h2>
+<pre><code>yarn install
+yarn test
+yarn start:server
+yarn start
+</code></pre><p>Open <em>Async process with middleware</em> subpage.</p>
+<h2 id="explanation">Explanation</h2>
+<p><em>async_process_basic</em> example is continued from.</p>
+<h3 id="redux-middleware">Redux Middleware</h3>
+<p><a href="https://redux.js.org/api-reference/applymiddleware" target="_blank">Redux middlewares</a> can be
+used to add custom functionality to the Redux store. Middlewares can be a good
+fit to integrate with different external APIs whether synchronous or
+asynchronous. Putting all the logic related to one external API to the
+middleware can help with encapsulation and help to keep the Redux containers
+and action creators very simple.</p>
+<p>Care must be taken not to implement very <em>magical</em> middlewares which remove the
+clarity and explicity of Redux.</p>
+<h3 id="commentservermiddleware">CommentServerMiddleware</h3>
+<p>In this example
+<a href="https://github.com/urmastalimaa/interactive-frontend-development/blob/master/lecture_5/src/async_process_with_middleware/containers/CommentListContainer.js" target="_blank">CommentListContainer</a>
+and
+<a href="https://github.com/urmastalimaa/interactive-frontend-development/blob/master/lecture_5/src/async_process_with_middleware/containers/CommentFormContainer.js" target="_blank">CommentFormContainer</a>
+have been changed to simply express the desire to perform an action, the
+containers no longer directly call functions that make asynchronous calls. This
+means that the React/Redux containers do not call functions tied to any
+particular Server interface.</p>
+<p>Instead
+<a href="https://github.com/urmastalimaa/interactive-frontend-development/blob/master/lecture_5/src/async_process_with_middleware/middlewares/CommentServerMiddleware.js" target="_blank">CommentServerMiddleware</a>
+has been added that listens for actions that should fire requests to the
+server. It then initiates the request and dispatches success/failure actions
+accordingly.</p>
+<p>The middleware can track in-flight requests, reuse or cancel them when
+appropriate. The middleware can also hold other state related to the back-end
+server.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../async_process_basics/" class="navigation navigation-prev " aria-label="Previous page: Asynchronous processes">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../../lecture_6/" class="navigation navigation-next " aria-label="Next page: Lecture 6 - Bidirectional communication with servers">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Asynchronous processes using middleware","level":"1.6.2","depth":2,"next":{"title":"Lecture 6 - Bidirectional communication with servers","level":"1.7","depth":1,"path":"lecture_6/README.md","ref":"./lecture_6/README.md","articles":[{"title":"WebSockets","level":"1.7.1","depth":2,"path":"lecture_6/src/websocket_basics/README.md","ref":"./lecture_6/src/websocket_basics/README.md","articles":[]}]},"previous":{"title":"Asynchronous processes","level":"1.6.1","depth":2,"path":"lecture_5/src/async_process_basics/README.md","ref":"./lecture_5/src/async_process_basics/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"lecture_5/src/async_process_with_middleware/README.md","mtime":"2019-04-29T07:52:42.296Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-05T19:35:27.127Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
